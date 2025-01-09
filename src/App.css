@@ -1,0 +1,126 @@
+:root {
+  /* Couleurs modernes et luxueuses */
+  --color-primary: #1a1a1a;
+  --color-secondary: #937c43;
+  --color-accent: #c9a95c;
+  --color-light: #ffffff;
+  --color-dark: #000000;
+  --color-gray: #666666;
+  --color-bg: #f8f8f8;
+
+  /* Typographie */
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Playfair Display", serif;
+
+  /* Mise en page */
+  --max-width: 1440px;
+  --header-height: 80px;
+
+  /* Animations */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* Z-index */
+  --z-header: 1000;
+  --z-overlay: 2000;
+  --z-modal: 3000;
+
+  /* Autres variables existantes... */
+}
+
+/* Styles de base */
+body {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  color: var(--color-dark);
+  background-color: var(--color-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-secondary);
+  font-weight: 400;
+}
+
+/* Styles des boutons */
+.button {
+  padding: 1rem 2.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.3s var(--ease-out);
+}
+
+.button-primary {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+
+.button-secondary {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+
+.fade-in-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+
+.fade-in-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+
+.fade-in-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+
+.scale-in.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
