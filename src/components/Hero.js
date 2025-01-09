@@ -15,9 +15,7 @@ const Hero = () => {
           la personnalité de chacun. Découvrez l'alliance parfaite entre luxe et
           nature.
         </p>
-        <div className="hero-cta">
-          <button className="button-secondary">Notre histoire</button>
-        </div>
+        <div className="hero-cta"></div>
         <div className="hero-features">
           <div className="feature">
             <i className="fas fa-leaf"></i>

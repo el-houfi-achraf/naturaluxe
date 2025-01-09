@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../styles/Products.css";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
@@ -26,7 +26,7 @@ const ProductCard = React.forwardRef(({ product }, ref) => {
 });
 
 const Products = ({ category }) => {
-  const [products, setProducts] = useState([
+  const productsData = [
     {
       id: 1,
       name: "Jasmin Éternel",
@@ -55,7 +55,9 @@ const Products = ({ category }) => {
       image:
         "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGFyZnVtZXxlbnwwfHwwfHx8MA%3D%3D",
     },
-  ]);
+  ];
+
+  const [products] = useState(productsData);
 
   const [headerRef, isHeaderVisible] = useIntersectionObserver();
 
