@@ -186,73 +186,13 @@
 }
 
 @media (max-width: 968px) {
-  .navbar-container {
-    padding: 0 1rem;
+  .navbar {
+    display: none; /* Cache complètement la navbar */
   }
 
-  .navbar-links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 280px;
-    height: 100vh;
-    background-color: var(--color-light);
-    flex-direction: column;
-    padding: calc(var(--header-height) + 1rem) 1.5rem;
-    margin: 0;
-    gap: 1.5rem;
-    transition: all 0.4s ease-in-out;
-    z-index: var(--z-header);
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-  }
-
-  .navbar-links.active {
-    right: 0;
-  }
-
-  .navbar-links a {
-    font-size: 0.95rem;
-    width: 100%;
-    padding: 0.75rem 0;
-    opacity: 0.9;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  }
-
-  .menu-toggle {
-    display: block;
-    z-index: calc(var(--z-header) + 1);
-  }
-
-  .icon-button {
-    font-size: 1.1rem;
-  }
+  /* Supprimez ou commentez les autres styles mobile qui ne seront plus nécessaires */
 }
 
 @media (max-width: 480px) {
-  .navbar-container {
-    padding: 0 0.75rem;
-  }
-
-  .navbar-links {
-    width: 100%;
-    padding: calc(var(--header-height) + 1rem) 1.25rem;
-  }
-
-  .logo {
-    font-size: 1.3rem;
-  }
-
-  .icon-button {
-    padding: 0.4rem;
-  }
-
-  .navbar-actions {
-    gap: 0.75rem;
-  }
-
-  .cart-count {
-    width: 16px;
-    height: 16px;
-    font-size: 0.6rem;
-  }
+  /* Supprimez ou commentez tous les styles mobile qui ne seront plus nécessaires */
 }
